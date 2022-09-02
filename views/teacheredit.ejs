@@ -1,0 +1,37 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mt-5">
+        
+        <form method="post" action="/teacher/update/<%= data._id%>">
+            <div class="mb-3">
+                <label for="surname" class="form-label">Surname</label>
+                <input type="text" name="surname" id="surname" class="form-control" value="<%= data.surname %>" />
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" value="<%= data.name %>" />
+            </div>
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile</label>
+                <input type="text" name="mobile" id="mobile" class="form-control" value="<%= data.mobile %>" />
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" name="address" id="address" class="form-control" value="<%= data.address %>" />
+            </div>
+            <div class="mb-3">
+                <label for="qualification" class="form-label">Qualification</label>
+                <input type="text" name="qualification" id="qualification" class="form-control" value="<%= data.qualification %>" />
+            </div>
+            <button type="submit" class="btn btn-primary" >Update</button>
+            <form action="/teacher" method="get">
+                <button type="submit" class="btn btn-secondary">Back To Home</button>
+            </form>
+           
+        </form>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

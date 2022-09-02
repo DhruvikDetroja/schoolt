@@ -1,0 +1,36 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 mt-5">
+            
+        <h2 class="alert alert-success text-center">Edit Fee</h2>
+    <form action="/student/editFeePage/<%=data._id%>" method="post">
+        <div class="mb-3">
+            <section class="container">
+              <div class="row">
+                <div class="col-sm-5 ">
+                  <label for="amount" class="form-label"><b>Amount</b></label>
+                  <input type="text" name="amount" id="amount" class="form-control" />
+                </div>
+              </div>
+        </section>
+        <div class="d-flex flex-row">
+          <div class="p-2 mt-3">       
+             <div class="d-inline"><button type="submit" class="mx-1 border-blue-500 bg-blue-500 rounded-md py-2 px-3 text-white font-semibold hover:bg-blue-600" >Save Fee</button>
+             </div>
+        </div>
+      </form>
+          <div class="p-2 mt-3">
+            <div class="d-inline"><form action="/student" method="get">
+              <button type="submit" class=" border-gray-500 bg-gray-500 rounded-md py-2 px-3 text-white font-semibold hover:bg-gray-600" >Back to Home</button>
+          </form></div></div>
+        </div>
+        
+      
+      
+        </div>
+        </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>
