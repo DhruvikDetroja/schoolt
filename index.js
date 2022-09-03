@@ -21,9 +21,7 @@ app.get('/', (req, res) => {
     res.render('sample.ejs');
   })
 //Load Route
-app.use('/student',(req,res)=>{
-     res.render('sample.ejs');
-})
+app.use('/student',studentRouter)
 
 app.use('/teacher',teacherRouter)
 
