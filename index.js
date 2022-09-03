@@ -21,7 +21,9 @@ app.get('/', (req, res) => {
     res.sendFile('index.html', {root: path.join(__dirname, 'public')});
   })
 //Load Route
-app.use('/student',studentRouter)
+app.use('/student',(req,res)=>{
+     res.send({ title: 'GeeksforGeeks' });
+})
 
 app.use('/teacher',teacherRouter)
 
