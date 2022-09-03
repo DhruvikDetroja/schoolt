@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   })
 //Load Route
 app.use('/student',(req,res)=>{
-     res.send({ title: 'GeeksforGeeks' });
+     res.render('sample.ejs');
 })
 
 app.use('/teacher',teacherRouter)
