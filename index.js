@@ -11,11 +11,15 @@ connectDB(DATABASE_URL)
 app.use(express.urlencoded({extended:false}))
 
 //Static Files
-app.use('/student',express.static(path.join(process.cwd(),"public")))
+// app.use('/student',express.static(path.join(process.cwd(),"public")))
+app.use(express.static('public'))
 
 //Set Template Engine
 app.set('view engine','ejs')
-
+//index.js
+app.get('/', (req, res) => {
+    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+  })
 //Load Route
 app.use('/student',studentRouter)
 
